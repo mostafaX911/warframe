@@ -1,16 +1,30 @@
 <template>
   <div id="app">
-    <app-header />
-    <router-view />
+    <v-app>
+      <app-header />
+      <v-main>
+        <v-sheet
+          id="scrolling-techniques-3"
+          class="overflow-y-auto"
+          max-height="600"
+        >
+          <v-container>
+            <router-view />
+          </v-container>
+        </v-sheet>
+      </v-main>
+      <Footer />
+    </v-app>
   </div>
 </template>
 <script>
 import AppHeader from "@/components/global/AppHeader.vue";
-
+import Footer from "./components/global/Footer.vue";
 export default {
   name: "app",
   components: {
     AppHeader,
+    Footer,
   },
 };
 </script>

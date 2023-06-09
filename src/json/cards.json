@@ -1,0 +1,44 @@
+[
+  {
+    "id":"1",
+    "title":"Excalibur Umbra",
+    "url":"https://images3.alphacoders.com/102/thumb-1920-1025530.jpg",
+    "disc":"From the shadow of the long night emerges a new Excalibur."
+  },
+  {
+    "id":"2",
+    "title":"Hildryn Prime",
+    "url":"https://cdn.akamai.steamstatic.com/steam/apps/2323413/ss_48a234a6e176333794ee8de359b61b8539109757.1920x1080.jpg?t=1678903559",
+    "disc":"Hildryn Prime proves that power is discipline's reward."
+  },
+  {
+    "id":"3",
+    "title":"Revenant Prime",
+    "url":"https://n9e5v4d8.ssl.hwcdn.net/uploads/thumbnails/eb94e8216684486f2d8254fac05cbac9_1600x900.png",
+    "disc":"The lost one rises. Reify the essence of the Eidolon as you wield Revenant Primes power."
+  },
+  {
+    "id":"4",
+    "title":"Harrow Prime",
+    "url":"https://www.ggrecon.com/media/4aubpeqf/warframe-harrow-2.jpg?mode=crop&width=682&quality=80&format=webp",
+    "disc":"The Inquisitor Eternal arises, hallowed by the Void, preaching a gospel of iron and flame."
+  },
+  {
+    "id":"5",
+    "title":"Excalibur Prime",
+    "url":"https://static.displate.com/857x1200/displate/2019-05-12/b7fb4f8ffd69373862eb5a7b8030445c_4eb38ff43c1ebda2729ad37c615428eb.jpg",
+    "disc":"Excalibur Prime is the epitome of mobility and offense, and features the same abilities as Excalibur, but has unique mod polarities installed allowing for greater customization."
+  },
+  {
+    "id":"6",
+    "title":"Excalibur",
+    "url":"https://i.ytimg.com/vi/_BvDdeZn25M/hqdefault.jpg",
+    "disc":"Excalibur epitomizes the warrior spirit. His master swordsmanship deals high damage. He is the embodiment of martial excellence."
+  },
+  {
+    "id":"7",
+    "title":"Hildryn",
+    "url":"https://pbs.twimg.com/media/D1Arr4zXQAUehMc.jpg:large",
+    "disc":"Strength is Hildryn's virtue. Her unique high-damage abilities are powered by her Shields, which can be recharged with Energy. Hildryn proves that a strong offense is a good defense."
+  }
+]

@@ -2,6 +2,7 @@
   <div class="about">
     <h1>{{ PageName }}</h1>
     <p>{{ PageDesc }}</p>
+    <v-btn color="primary" rounded>button</v-btn>
   </div>
 </template>
 <script>
@@ -12,8 +13,16 @@ export default {
     return {
       PageName: "About Us",
       PageDesc: "This is About us Page",
+      loading: false,
     };
   },
   name: "AboutView",
+  methods: {
+    async remove() {
+      this.loading = true;
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      this.loading = false;
+    },
+  },
 };
 </script>
