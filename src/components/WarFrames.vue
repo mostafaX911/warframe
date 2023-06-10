@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" lg="4" md="4">
+  <v-col cols="12" lg="3" md="4">
     <v-card class="mx-auto" max-width="344">
       <v-img :src="url" height="200px" cover></v-img>
 
@@ -10,39 +10,51 @@
       </v-card-subtitle>
 
       <v-card-actions>
-        <v-btn color="orange lighten-2" text> Explore </v-btn>
+        <v-btn color="green darken-1" text @click="dialog = true"> Show </v-btn>
 
         <v-spacer></v-spacer>
-
-        <v-btn icon @click="show = !show">
-          <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
-        </v-btn>
       </v-card-actions>
-
-      <v-expand-transition>
-        <div v-show="show">
-          <v-divider></v-divider>
-
-          <v-card-text>
-            I'm a thing. But, like most politicians, he promised more than he
-            could deliver. You won't have time for sleeping, soldier, not with
-            all the bed making you'll be doing. Then we'll go with that data
-            file! Hey, you add a one and two zeros to that or we walk! You're
-            going to do his laundry? I've got to find a way to escape.
-          </v-card-text>
-        </div>
-      </v-expand-transition>
     </v-card>
+    <v-dialog v-model="dialog" width="600px">
+      <v-card class="mx-auto">
+        <v-img :src="url" height="200px" cover></v-img>
+
+        <v-card-title> {{ title }} </v-card-title>
+
+        <v-card-subtitle>
+          {{ disc }}
+        </v-card-subtitle>
+
+        <template>
+          <v-expansion-panels focusable>
+            <v-expansion-panel v-for="(proper, i) in propers" :key="i">
+              <v-expansion-panel-header>{{
+                proper.title
+              }}</v-expansion-panel-header>
+              <v-expansion-panel-content>
+                {{ proper.discription }}
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </template>
+      </v-card>
+    </v-dialog>
   </v-col>
 </template>
 
 <script>
+import ExcaliburUmbra from "@/components/global/ExcaliburUmbra.vue";
 export default {
-  props: ["title", "disc", "url"],
+  props: ["title", "disc", "url", "propers", "info"],
   name: "WarFrames",
   data: () => ({
     show: false,
+    hide: false,
+    dialog: false,
   }),
+  componants: {
+    ExcaliburUmbra,
+  },
 };
 </script>
 

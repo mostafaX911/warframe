@@ -15,6 +15,8 @@
         :title="card.title"
         :disc="card.disc"
         :url="card.url"
+        :propers="card.propers"
+        :info="card.info"
       />
     </v-row>
   </div>
