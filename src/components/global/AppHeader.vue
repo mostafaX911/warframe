@@ -46,34 +46,35 @@
         </v-tabs>
       </template>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" app absolute bottom temporary>
-      <v-list nav dense>
+
+    <v-navigation-drawer
+      src="https://cdnb.artstation.com/p/assets/images/images/006/481/043/large/zeljko-duvnjak-warframe-orokin-moon-megastructure-a-01.jpg?1498924284"
+      v-model="drawer"
+      app
+      dark
+      absolute
+      left
+      temporary
+    >
+      <v-list nav>
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
-            <v-list-item-title to="/" exact
-              ><v-tab class="" to="/" exact>Home</v-tab></v-list-item-title
-            >
+          <v-list-item to="/" exact>
+            <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title
-              ><v-tab to="/blog">Blog</v-tab></v-list-item-title
-            >
+          <v-list-item to="/blog">
+            <v-list-item-title>Blog</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title
-              ><v-tab to="/about">About</v-tab></v-list-item-title
-            >
+          <v-list-item to="/about">
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title
-              ><v-tab to="/help">Help</v-tab></v-list-item-title
-            >
+          <v-list-item to="/help">
+            <v-list-item-title>Help</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -127,5 +128,11 @@ export default {
       }
     }
   }
+}
+</style>
+<style lang="scss">
+.v-navigation-drawer__image {
+  left: 0;
+  background-position: bottom;
 }
 </style>

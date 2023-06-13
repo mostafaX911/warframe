@@ -7,69 +7,116 @@
     "Passive": "Umbra exhibits sentience in combat without Transference control. Attacks 10% faster and deals 10% more damage while wielding swords.",
     "propers": [
       {
-        "title": "passive",
-        "discription": "Umbra exhibits sentience in combat without Transference control. Attacks 10% faster and deals 10% more damage while wielding swords."
-      },
-      {
         "title": "discription",
         "discription": "From the shadow of the long night emerges a new Excalibur."
       },
       {
-        "title": "Abilities",
-        "discription": "From the shadow of the long night emerges a new Excalibur."
+        "title": "passive",
+        "discription": "Umbra exhibits sentience in combat without Transference control. Attacks 10% faster and deals 10% more damage while wielding swords."
       }
-    ]
+    ],
+    "Abilities":["Slash Dash","Radial Howl"," Radial Javelin","Exalted Blade"]
   },
   {
     "id": "2",
     "title": "Hildryn Prime",
     "url": "https://cdn.akamai.steamstatic.com/steam/apps/2323413/ss_48a234a6e176333794ee8de359b61b8539109757.1920x1080.jpg?t=1678903559",
     "disc": "Hildryn Prime proves that power is discipline's reward.",
-    "Passive": "Become invulnerable for a brief moment after shields are depleted. This ability is restored when shields fully recharge.",
     "propers": [
+      {
+        "title": "discription",
+        "discription": "Hildryn Prime proves that power is discipline's reward."
+      },
       {
         "title": "passive",
         "discription": "Become invulnerable for a brief moment after shields are depleted. This ability is restored when shields fully recharge."
-      },
-      {
-        "title": "discription",
-        "discription": "From the shadow of the long night emerges a new Excalibur."
       }
-    ]
+    ],
+    "Abilities":["Balefire","Pillage"," Haven","Aegis Storm"]
   },
   {
     "id": "3",
     "title": "Revenant Prime",
     "url": "https://n9e5v4d8.ssl.hwcdn.net/uploads/thumbnails/eb94e8216684486f2d8254fac05cbac9_1600x900.png",
     "disc": "The lost one rises. Reify the essence of the Eidolon as you wield Revenant Primes power.",
-    "Passive": ""
+    "propers": [
+      {
+        "title": "discription",
+        "discription": "Excalibur Prime is the epitome of mobility and offense, and features the same abilities as Excalibur, but has unique mod polarities installed allowing for greater customization."
+      },
+      {
+        "title": "passive",
+        "discription": "Excalibur Prime deals 10% increased damage and attacks 10% faster when wielding swords."
+      }
+    ],
+    "Abilities":["Enthrall","Mesmer Skin","Reave","Danse Macabre"]
   },
   {
     "id": "4",
     "title": "Harrow Prime",
     "url": "https://www.ggrecon.com/media/4aubpeqf/warframe-harrow-2.jpg?mode=crop&width=682&quality=80&format=webp",
     "disc": "The Inquisitor Eternal arises, hallowed by the Void, preaching a gospel of iron and flame.",
-    "Passive": ""
+    "propers": [
+      {
+        "title": "discription",
+        "discription": "The Inquisitor Eternal arises, hallowed by the Void, preaching a gospel of iron and flame."
+      },
+      {
+        "title": "passive",
+        "discription": "Overshield capacity doubled,Start missions at maximum energy."
+      }
+    ],
+    "Abilities":["Condemn","Penance"," Thurible","Covenant"]
   },
   {
     "id": "5",
     "title": "Excalibur Prime",
     "url": "https://static.displate.com/857x1200/displate/2019-05-12/b7fb4f8ffd69373862eb5a7b8030445c_4eb38ff43c1ebda2729ad37c615428eb.jpg",
     "disc": "Excalibur Prime is the epitome of mobility and offense, and features the same abilities as Excalibur, but has unique mod polarities installed allowing for greater customization.",
-    "Passive": ""
+    "propers": [
+      {
+        "title": "discription",
+        "discription": "Excalibur Prime is the epitome of mobility and offense, and features the same abilities as Excalibur, but has unique mod polarities installed allowing for greater customization."
+      },
+      {
+        "title": "passive",
+        "discription": "Excalibur Prime deals 10% increased damage and attacks 10% faster when wielding swords."
+      }
+    ],
+    "Abilities":["Slash Dash","Radial Blind"," Radial Javelin","Exalted Blade"]
   },
   {
     "id": "6",
     "title": "Excalibur",
     "url": "https://i.ytimg.com/vi/_BvDdeZn25M/hqdefault.jpg",
     "disc": "Excalibur epitomizes the warrior spirit. His master swordsmanship deals high damage. He is the embodiment of martial excellence.",
-    "Passive": ""
+    "propers": [
+      {
+        "title": "discription",
+        "discription": "Excalibur epitomizes the warrior spirit. His master swordsmanship deals high damage. He is the embodiment of martial excellence."
+      },
+      {
+        "title": "passive",
+        "discription": "Excalibur deals 10% increased damage and attacks 10% faster when wielding swords."
+      }
+    ],
+    "Abilities":["Slash Dash","Radial Blind"," Radial Javelin","Exalted Blade"]
   },
   {
     "id": "7",
     "title": "Hildryn",
     "url": "https://pbs.twimg.com/media/D1Arr4zXQAUehMc.jpg:large",
     "disc": "Strength is Hildryn's virtue. Her unique high-damage abilities are powered by her Shields, which can be recharged with Energy. Hildryn proves that a strong offense is a good defense.",
-    "Passive": ""
+    "propers": [
+      {
+        "title": "discription",
+        "discription": "Strength is Hildryn's virtue. Her unique high-damage abilities are powered by her Shields, which can be recharged with Energy. Hildryn proves that a strong offense is a good defense."
+      },
+      {
+        "title": "passive",
+        "discription": "Become invulnerable for a brief moment after shields are depleted. This ability is restored when shields fully recharge."
+      }
+    ],
+    "Abilities":["Balefire","Pillage"," Haven","Aegis Storm"]
   }
 ]

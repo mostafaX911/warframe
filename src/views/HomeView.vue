@@ -16,7 +16,7 @@
         :disc="card.disc"
         :url="card.url"
         :propers="card.propers"
-        :info="card.info"
+        :Abilities="card.Abilities"
       />
     </v-row>
   </div>

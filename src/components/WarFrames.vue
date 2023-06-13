@@ -35,6 +35,49 @@
                 {{ proper.discription }}
               </v-expansion-panel-content>
             </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header> Abilities </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-row class="">
+                  <v-col cols="6">
+                    <h3 class="grey darken-3 white--text">1st Ability</h3>
+                  </v-col>
+                  <v-col cols="auto">
+                    <span class="">{{ Abilities[0] }}</span>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="6"
+                    ><h3 class="grey darken-3 white--text">
+                      2nd Ability
+                    </h3></v-col
+                  >
+                  <v-col cols="auto"
+                    ><span class="">{{ Abilities[1] }}</span></v-col
+                  >
+                </v-row>
+                <v-row>
+                  <v-col cols="6"
+                    ><h3 class="grey darken-3 white--text">
+                      3rd Ability
+                    </h3></v-col
+                  >
+                  <v-col cols="auto"
+                    ><span class="">{{ Abilities[2] }}</span></v-col
+                  >
+                </v-row>
+                <v-row>
+                  <v-col cols="6"
+                    ><h3 class="grey darken-3 white--text">
+                      4th Ability
+                    </h3></v-col
+                  >
+                  <v-col cols="auto"
+                    ><span class="">{{ Abilities[3] }}</span></v-col
+                  >
+                </v-row>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
           </v-expansion-panels>
         </template>
       </v-card>
@@ -45,7 +88,7 @@
 <script>
 import ExcaliburUmbra from "@/components/global/ExcaliburUmbra.vue";
 export default {
-  props: ["title", "disc", "url", "propers", "info"],
+  props: ["title", "disc", "url", "propers", "info", "Abilities"],
   name: "WarFrames",
   data: () => ({
     show: false,

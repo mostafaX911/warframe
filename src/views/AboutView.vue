@@ -2,7 +2,7 @@
   <div class="about">
     <h1>{{ PageName }}</h1>
     <p>{{ PageDesc }}</p>
-    <v-btn color="primary" rounded>button</v-btn>
+    <v-btn color="primary" rounded to="/">return to home page</v-btn>
   </div>
 </template>
 <script>

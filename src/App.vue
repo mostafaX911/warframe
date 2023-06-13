@@ -1,21 +1,19 @@
 <template>
-  <div id="app">
-    <v-app>
-      <app-header />
-      <v-main>
-        <v-sheet
-          id="scrolling-techniques-3"
-          class="overflow-y-auto"
-          max-height="600"
-        >
-          <v-container>
-            <router-view />
-          </v-container>
-        </v-sheet>
-      </v-main>
-      <Footer />
-    </v-app>
-  </div>
+  <v-app>
+    <app-header />
+    <v-main>
+      <v-sheet
+        id="scrolling-techniques-3"
+        class="overflow-y-auto"
+        max-height="600"
+      >
+        <v-container fluid>
+          <router-view />
+        </v-container>
+      </v-sheet>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 <script>
 import AppHeader from "@/components/global/AppHeader.vue";
