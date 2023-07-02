@@ -24,14 +24,24 @@
       <v-app-bar-title><div class="logo">Warframe</div></v-app-bar-title>
 
       <v-spacer></v-spacer>
+      <v-switch
+        class="mt-3"
+        v-model="$vuetify.theme.dark"
+        inset
+        label="Vuetify Theme Dark"
+        persistent-hint
+      ></v-switch>
+      <v-divider vertical></v-divider>
 
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
+      <v-divider vertical></v-divider>
 
       <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+        <v-icon>mdi-heart </v-icon>
       </v-btn>
+      <v-divider vertical></v-divider>
 
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
@@ -40,8 +50,12 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab class="" to="/" exact>Home</v-tab>
+
+          <v-divider vertical></v-divider>
           <v-tab to="/blog">Blog</v-tab>
+          <v-divider vertical></v-divider>
           <v-tab to="/about">About</v-tab>
+          <v-divider vertical></v-divider>
           <v-tab to="/help">Help</v-tab>
         </v-tabs>
       </template>
@@ -64,14 +78,17 @@
           <v-list-item to="/" exact>
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
+          <v-divider></v-divider>
 
           <v-list-item to="/blog">
             <v-list-item-title>Blog</v-list-item-title>
           </v-list-item>
+          <v-divider></v-divider>
 
           <v-list-item to="/about">
             <v-list-item-title>About</v-list-item-title>
           </v-list-item>
+          <v-divider></v-divider>
 
           <v-list-item to="/help">
             <v-list-item-title>Help</v-list-item-title>
@@ -88,10 +105,17 @@ export default {
     drawer: false,
     group: null,
   }),
+  mounted() {
+    const mode = localStorage.mode === "true";
+    this.$vuetify.theme.dark = mode;
+  },
 
   watch: {
     group() {
       this.drawer = false;
+    },
+    "$vuetify.theme.dark"(v) {
+      localStorage.setItem("mode", v);
     },
   },
   name: "AppHeader",
