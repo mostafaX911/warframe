@@ -3,10 +3,10 @@
     <v-app-bar
       app
       color="#6A76AB"
-      absolute
       dark
-      shrink-on-scroll
       prominent
+      dense
+      shrink-on-scroll
       src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2021/12/warframe_new_war.jpg"
       fade-img-on-scroll
       scroll-target="#scrolling-techniques-3"
@@ -20,8 +20,15 @@
       </template>
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-app-bar-title><div class="logo">Warframe</div></v-app-bar-title>
+      <v-btn rounded class="mr-2" icon to="/">
+        <v-avatar>
+          <img
+            src="https://cutewallpaper.org/21/warframe-desktop-icon/Pin-by-on-warframe-in-2019-Warframe-art,-Art-.jpg"
+            alt="warframe"
+          />
+        </v-avatar>
+      </v-btn>
+      <v-app-bar-title><div class="">Warframe</div></v-app-bar-title>
 
       <v-spacer></v-spacer>
       <v-switch
@@ -70,6 +77,14 @@
       left
       temporary
     >
+      <v-btn class="ma-2" x-large rounded icon to="/">
+        <v-avatar>
+          <img
+            src="https://cutewallpaper.org/21/warframe-desktop-icon/Pin-by-on-warframe-in-2019-Warframe-art,-Art-.jpg"
+            alt="warframe"
+          />
+        </v-avatar>
+      </v-btn>
       <v-list nav>
         <v-list-item-group
           v-model="group"
