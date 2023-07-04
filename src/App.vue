@@ -5,7 +5,7 @@
       <v-sheet
         id="scrolling-techniques-3"
         class="overflow-y-auto"
-        max-height="600"
+        max-height="84vh"
       >
         <v-container fluid>
           <router-view />
