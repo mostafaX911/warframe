@@ -35,24 +35,11 @@
         class="mt-3"
         v-model="$vuetify.theme.dark"
         inset
-        label="Vuetify Theme Dark"
+        label="Dark mode"
         persistent-hint
       ></v-switch>
-      <v-divider vertical></v-divider>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-divider vertical></v-divider>
-
-      <v-btn icon>
-        <v-icon>mdi-heart </v-icon>
-      </v-btn>
-      <v-divider vertical></v-divider>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <sign-up></sign-up>
 
       <template v-slot:extension>
         <v-tabs align-with-title>
@@ -115,7 +102,11 @@
 </template>
 
 <script>
+import SignUp from "./SignUp.vue";
 export default {
+  components: {
+    SignUp,
+  },
   data: () => ({
     drawer: false,
     group: null,
