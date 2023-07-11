@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog v-model="dialog" width="550">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           rounded
@@ -14,7 +14,7 @@
         </v-btn>
       </template>
 
-      <v-card>
+      <v-card elevation="10" class="pa-3">
         <validation-observer ref="observer" v-slot="{ invalid }">
           <form @submit.prevent="submit">
             <validation-provider
@@ -35,13 +35,13 @@
               name="phoneNumber"
               :rules="{
                 required: true,
-                digits: 7,
-                regex: '^(71|72|74|76|81|82|84|85|86|87|88|89)\\d{5}$',
+                digits: 11,
+                regex: '^01[0125][0-9]{8}$',
               }"
             >
               <v-text-field
                 v-model="phoneNumber"
-                :counter="7"
+                :counter="11"
                 :error-messages="errors"
                 label="Phone Number"
                 required
