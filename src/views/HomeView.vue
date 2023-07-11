@@ -12,24 +12,27 @@
       <WarFrames
         v-for="card in FilteredCards"
         :key="card.id"
+        :id="card.id"
         :title="card.title"
         :disc="card.disc"
         :url="card.url"
         :propers="card.propers"
-        :Abilities="card.Abilities"
+        :abilities="card.abilities"
+        @deleteFrame="deleteFrame"
       />
     </v-row>
   </div>
 </template>
 
 <script>
-import JasonCards from "../json/cards.json";
+// import JasonCards from "../json/cards.json";
 // @ is an alias to /src
 import WarFrames from "@/components/WarFrames.vue";
 export default {
   data: () => {
     return {
-      cards: JasonCards,
+      // cards: JasonCards,
+      cards: [],
       search: "",
     };
   },
@@ -49,6 +52,20 @@ export default {
   name: "HomeView",
   components: {
     WarFrames,
+  },
+
+  methods: {
+    async getMonsters() {
+      const response = await this.$store.dispatch("getMonsters");
+      this.cards = response.items;
+    },
+    deleteFrame() {
+      this.getMonsters();
+    },
+  },
+
+  mounted() {
+    this.getMonsters();
   },
 };
 </script>

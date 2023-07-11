@@ -13,6 +13,7 @@
         <v-btn color="green darken-1" text @click="dialog = true"> Show </v-btn>
 
         <v-spacer></v-spacer>
+        <v-btn color="red accent-1" text @click="deleteFrame()"> delete </v-btn>
       </v-card-actions>
     </v-card>
     <v-dialog v-model="dialog" width="600px">
@@ -36,14 +37,14 @@
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
-              <v-expansion-panel-header> Abilities </v-expansion-panel-header>
+              <v-expansion-panel-header> abilities </v-expansion-panel-header>
               <v-expansion-panel-content class="mt-2">
                 <v-row class="">
                   <v-col cols="6">
                     <h3 class="grey darken-3 white--text">1st Ability</h3>
                   </v-col>
                   <v-col cols="auto">
-                    <span class="">{{ Abilities[0] }}</span>
+                    <span class="">{{ abilities[0] }}</span>
                   </v-col>
                 </v-row>
                 <v-row>
@@ -53,7 +54,7 @@
                     </h3></v-col
                   >
                   <v-col cols="auto"
-                    ><span class="">{{ Abilities[1] }}</span></v-col
+                    ><span class="">{{ abilities[1] }}</span></v-col
                   >
                 </v-row>
                 <v-row>
@@ -63,7 +64,7 @@
                     </h3></v-col
                   >
                   <v-col cols="auto"
-                    ><span class="">{{ Abilities[2] }}</span></v-col
+                    ><span class="">{{ abilities[2] }}</span></v-col
                   >
                 </v-row>
                 <v-row>
@@ -73,7 +74,7 @@
                     </h3></v-col
                   >
                   <v-col cols="auto"
-                    ><span class="">{{ Abilities[3] }}</span></v-col
+                    ><span class="">{{ abilities[3] }}</span></v-col
                   >
                 </v-row>
               </v-expansion-panel-content>
@@ -88,7 +89,7 @@
 <script>
 import ExcaliburUmbra from "@/components/global/ExcaliburUmbra.vue";
 export default {
-  props: ["title", "disc", "url", "propers", "info", "Abilities"],
+  props: ["id", "title", "disc", "url", "propers", "info", "abilities"],
   name: "WarFrames",
   data: () => ({
     show: false,
@@ -97,6 +98,12 @@ export default {
   }),
   componants: {
     ExcaliburUmbra,
+  },
+  methods: {
+    async deleteFrame() {
+      await this.$store.dispatch("deleteFrame", this.id);
+      this.$emit("deleteFrame", this.id);
+    },
   },
 };
 </script>

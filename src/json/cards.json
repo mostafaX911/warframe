@@ -15,7 +15,12 @@
         "discription": "Umbra exhibits sentience in combat without Transference control. Attacks 10% faster and deals 10% more damage while wielding swords."
       }
     ],
-    "Abilities":["Slash Dash","Radial Howl"," Radial Javelin","Exalted Blade"]
+    "Abilities": [
+      "Slash Dash",
+      "Radial Howl",
+      " Radial Javelin",
+      "Exalted Blade"
+    ]
   },
   {
     "id": "2",
@@ -32,7 +37,7 @@
         "discription": "Become invulnerable for a brief moment after shields are depleted. This ability is restored when shields fully recharge."
       }
     ],
-    "Abilities":["Balefire","Pillage"," Haven","Aegis Storm"]
+    "Abilities": ["Balefire", "Pillage", " Haven", "Aegis Storm"]
   },
   {
     "id": "3",
@@ -49,7 +54,7 @@
         "discription": "Excalibur Prime deals 10% increased damage and attacks 10% faster when wielding swords."
       }
     ],
-    "Abilities":["Enthrall","Mesmer Skin","Reave","Danse Macabre"]
+    "Abilities": ["Enthrall", "Mesmer Skin", "Reave", "Danse Macabre"]
   },
   {
     "id": "4",
@@ -66,7 +71,7 @@
         "discription": "Overshield capacity doubled,Start missions at maximum energy."
       }
     ],
-    "Abilities":["Condemn","Penance"," Thurible","Covenant"]
+    "Abilities": ["Condemn", "Penance", " Thurible", "Covenant"]
   },
   {
     "id": "5",
@@ -83,7 +88,12 @@
         "discription": "Excalibur Prime deals 10% increased damage and attacks 10% faster when wielding swords."
       }
     ],
-    "Abilities":["Slash Dash","Radial Blind"," Radial Javelin","Exalted Blade"]
+    "Abilities": [
+      "Slash Dash",
+      "Radial Blind",
+      " Radial Javelin",
+      "Exalted Blade"
+    ]
   },
   {
     "id": "6",
@@ -100,7 +110,12 @@
         "discription": "Excalibur deals 10% increased damage and attacks 10% faster when wielding swords."
       }
     ],
-    "Abilities":["Slash Dash","Radial Blind"," Radial Javelin","Exalted Blade"]
+    "Abilities": [
+      "Slash Dash",
+      "Radial Blind",
+      " Radial Javelin",
+      "Exalted Blade"
+    ]
   },
   {
     "id": "7",
@@ -117,6 +132,6 @@
         "discription": "Become invulnerable for a brief moment after shields are depleted. This ability is restored when shields fully recharge."
       }
     ],
-    "Abilities":["Balefire","Pillage"," Haven","Aegis Storm"]
+    "Abilities": ["Balefire", "Pillage", " Haven", "Aegis Storm"]
   }
 ]
