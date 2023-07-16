@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import HelpView from "../views/HelpView.vue";
 import BlogView from "../views/BlogView.vue";
+import FrameView from "../views/FrameView.vue";
+import UsersView from "../views/UsersView.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +32,16 @@ const routes = [
     path: "/help",
     name: "help",
     component: HelpView,
+  },
+  {
+    path: "/monster/:id",
+    name: "monster",
+    component: FrameView,
+  },
+  {
+    path: "/users",
+    name: "users",
+    component: UsersView,
   },
 ];
 

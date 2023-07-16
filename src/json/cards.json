@@ -51,7 +51,7 @@
       },
       {
         "title": "passive",
-        "discription": "Excalibur Prime deals 10% increased damage and attacks 10% faster when wielding swords."
+        "discription": "Shield depletion smashes enemies within 7.5m with a 100 Damage knockdown shockwave."
       }
     ],
     "Abilities": ["Enthrall", "Mesmer Skin", "Reave", "Danse Macabre"]

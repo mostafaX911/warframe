@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" lg="3" md="4">
-    <v-card class="mx-auto" max-width="344">
+    <v-card class="mx-auto" max-width="344" :to="`/monster/${id}`">
       <v-img :src="url" height="200px" cover></v-img>
 
       <v-card-title> {{ title }} </v-card-title>
@@ -10,10 +10,15 @@
       </v-card-subtitle>
 
       <v-card-actions>
-        <v-btn color="green darken-1" text @click="dialog = true"> Show </v-btn>
-
+        <v-btn color="green darken-1" text @click.prevent="dialog = true">
+          Show
+        </v-btn>
         <v-spacer></v-spacer>
-        <v-btn color="red accent-1" text @click="deleteFrame()"> delete </v-btn>
+        <edit-frame></edit-frame>
+        <v-spacer></v-spacer>
+        <v-btn color="red accent-1" text @click.prevent="deleteFrame()">
+          delete
+        </v-btn>
       </v-card-actions>
     </v-card>
     <v-dialog v-model="dialog" width="600px">
@@ -88,7 +93,10 @@
 
 <script>
 import ExcaliburUmbra from "@/components/global/ExcaliburUmbra.vue";
+import EditFrameVue from "./EditFrame.vue";
+import EditFrame from "./EditFrame.vue";
 export default {
+  components: { EditFrame },
   props: ["id", "title", "disc", "url", "propers", "info", "abilities"],
   name: "WarFrames",
   data: () => ({
@@ -98,6 +106,7 @@ export default {
   }),
   componants: {
     ExcaliburUmbra,
+    EditFrameVue,
   },
   methods: {
     async deleteFrame() {

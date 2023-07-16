@@ -38,19 +38,20 @@
         label="Dark mode"
         persistent-hint
       ></v-switch>
-
+      <log-in></log-in>
       <sign-up></sign-up>
 
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab class="" to="/" exact>Home</v-tab>
-
           <v-divider vertical></v-divider>
           <v-tab to="/blog">Blog</v-tab>
           <v-divider vertical></v-divider>
           <v-tab to="/about">About</v-tab>
           <v-divider vertical></v-divider>
           <v-tab to="/help">Help</v-tab>
+          <v-divider vertical></v-divider>
+          <v-tab to="/users">Users</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -95,6 +96,10 @@
           <v-list-item to="/help">
             <v-list-item-title>Help</v-list-item-title>
           </v-list-item>
+          <v-divider></v-divider>
+          <v-list-item to="/users">
+            <v-list-item-title>Users</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -103,9 +108,11 @@
 
 <script>
 import SignUp from "./SignUp.vue";
+import LogIn from "./LogIn.vue";
 export default {
   components: {
     SignUp,
+    LogIn,
   },
   data: () => ({
     drawer: false,
