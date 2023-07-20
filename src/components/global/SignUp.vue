@@ -144,9 +144,9 @@ export default {
     ValidationObserver,
   },
   methods: {
-    submit() {
+    async submit() {
       this.$refs.observer.validate();
-      this.$store.dispatch("signup", {
+      await this.$store.dispatch("signup", {
         name: this.name,
         phoneNumber: this.phoneNumber,
         email: this.email,
@@ -154,6 +154,12 @@ export default {
         age: this.age,
         gender: this.gender,
       });
+      this.dialog = false;
+      setTimeout(() => {
+        this.$eventHub.$emit("usercreated");
+      }, 1000);
+
+      console.log(this.$eventHub);
     },
     clear() {
       this.name = "";

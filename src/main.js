@@ -10,8 +10,9 @@ import "./scss/main.scss";
 //import "normalize.css";
 
 Vue.config.productionTip = false;
+// Vue.prototype.$eventHub = new Vue(); // Global event bus
 
-new Vue({
+Vue.prototype.$eventHub = new Vue({
   router,
   store,
   vuetify,

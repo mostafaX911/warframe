@@ -12,6 +12,16 @@
         >
           log in
         </v-btn>
+        <v-btn
+          v-if="$store.state.islogin"
+          @click="logout"
+          rounded
+          class="ma-1"
+          color="primary"
+          dark
+        >
+          log out
+        </v-btn>
       </template>
 
       <v-card elevation="10" class="pa-3">
@@ -95,17 +105,16 @@ export default {
     ValidationObserver,
   },
   methods: {
+    logout() {
+      this.$store.commit("logout");
+    },
     async submit() {
       this.$refs.observer.validate();
-      const response = await this.$store.dispatch("login", {
+      await this.$store.dispatch("login", {
         email: this.email,
         password: this.password,
       });
-      if (response.status === 200) {
-        console.log("loged in");
-      } else {
-        console.log("not loged in");
-      }
+      this.dialog = false;
     },
     clear() {
       this.email = "";
