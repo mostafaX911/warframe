@@ -1,6 +1,16 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="550">
+    <v-btn
+      v-if="$store.state.islogin"
+      @click="logout"
+      rounded
+      class="ma-1"
+      color="primary"
+      dark
+    >
+      log out
+    </v-btn>
+    <v-dialog v-if="!$store.state.islogin" v-model="dialog" width="550">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           rounded
@@ -11,16 +21,6 @@
           v-on="on"
         >
           log in
-        </v-btn>
-        <v-btn
-          v-if="$store.state.islogin"
-          @click="logout"
-          rounded
-          class="ma-1"
-          color="primary"
-          dark
-        >
-          log out
         </v-btn>
       </template>
 
@@ -110,11 +110,16 @@ export default {
     },
     async submit() {
       this.$refs.observer.validate();
-      await this.$store.dispatch("login", {
+      const response = await this.$store.dispatch("login", {
         email: this.email,
         password: this.password,
       });
-      this.dialog = false;
+      if (response === false) {
+        alert("login failed");
+        this.dialog = true;
+      } else {
+        this.dialog = false;
+      }
     },
     clear() {
       this.email = "";
@@ -134,6 +139,7 @@ export default {
       dialog: false,
       type: "password",
       eye: true,
+      loginFailure: false,
     };
   },
 };

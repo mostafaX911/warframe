@@ -42,7 +42,7 @@
         ></v-combobox>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="editFrame"> Create frame </v-btn>
+          <v-btn color="primary" text @click="editFrame"> edit frame </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

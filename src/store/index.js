@@ -77,9 +77,13 @@ export default new Vuex.Store({
     },
     async login({ commit }, payload) {
       const response = await axios.post(`${apiUrl}/login`, payload);
-      if (response.status === 200) {
+      if (response?.data?.status === 200) {
         commit("loginSuccess", response.data);
         console.log("login success");
+      } else {
+        commit("loginFailure");
+        console.log("login failure");
+        return false;
       }
     },
     logout({ commit }) {
@@ -97,6 +101,10 @@ export default new Vuex.Store({
       const response = await axios.delete(
         `${apiUrl}/delete-monster/${payload}`
       );
+      return response.data;
+    },
+    async deleteUser(_, payload) {
+      const response = await axios.delete(`${apiUrl}/delete-user/${payload}`);
       return response.data;
     },
   },

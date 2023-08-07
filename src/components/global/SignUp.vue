@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="550">
+    <v-dialog v-if="!$store.state.islogin" v-model="dialog" width="550">
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           rounded
