@@ -36,6 +36,10 @@ export default {
         label: "Help",
         to: "/help",
       },
+      {
+        label: "Users",
+        to: "/users",
+      },
     ],
   }),
   name: "footerView",
